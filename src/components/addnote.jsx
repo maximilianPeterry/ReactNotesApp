@@ -2,7 +2,6 @@ import React from 'react';
 import './addnote.css';
 
 function AddNote(props) {
-
     return (
         <div>
             <div id='newContainer'>
@@ -14,7 +13,7 @@ function AddNote(props) {
                 </div>
             </div>
             <div id='buttoncontainer'>
-                <button onClick={(event) => props.clicked(event)}>Add Note</button>
+                <button onClick={(event) => props.clicked(event)} onMouseUp={console.log('mouse upped')}>Add Note</button>
             </div>
         </div>
     )

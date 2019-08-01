@@ -24,6 +24,9 @@ class App extends Component {
     console.log(this.state.notesArray)
   }
 
+  clearTitle = () => {
+
+  }
 
   render() {
     return (

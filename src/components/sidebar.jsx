@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './sidebar.css';
 
-class SideBar extends React.Component {
+class SideBar extends Component {
     render() {
         return (
             <div id='sidebar'>
