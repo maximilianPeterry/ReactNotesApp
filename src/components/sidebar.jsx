@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
-import './sidebar.css';
+import React from 'react';
 
-class SideBar extends Component {
-    render() {
-        return (
-            <div id='sidebar'>
-                <div id='existingNotes'>
-                </div>
-            </div>
-        )
-    }
+function Sidebar(props) {
+    return (
+        <div id='viewNoteContainer'>
+            {props.notesArray.map(note => {
+                return (<h1>{note}</h1>)
+            })}
+        </div>
+    )
 }
-
-
-export default SideBar;
+ 
+export default Sidebar;

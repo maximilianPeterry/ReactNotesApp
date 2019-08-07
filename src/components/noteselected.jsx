@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import './sidebar.css';
 
-function NoteSelected(props) {
-    return (
-        <div id='viewNoteContainer'>
-            {props.notesArray.map((note) => {
-                return (<h1>{note}</h1>)
-            })}
-        </div>
-    )
+class NoteSelected extends Component {
+    render() {
+        return (
+            <div id='sidebar'>
+                <div id='existingNotes'>
+                </div>
+            </div>
+        )
+    }
 }
+
 
 export default NoteSelected;

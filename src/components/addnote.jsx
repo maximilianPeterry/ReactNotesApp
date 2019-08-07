@@ -5,15 +5,17 @@ function AddNote(props) {
     return (
         <div>
             <div id='newContainer'>
-                <div id='newTitle'>
-                    <input id='titleinput' type='text' placeholder='Title...' onChange={(event) => props.setTitle(event)}></input>
-                </div>
-                <div id='newNoteField'>
+                <form id='form'>
+                  <div id='newTitle'>
+                    <input id='titleinput' type='text' placeholder='Title...' onChange={event => props.setTitle(event)}></input>
+                  </div>
+                  <div id='newNoteField'>
                     <input id='noteinput' type='text' placeholder='Type your note...' onChange={(event) => props.setText(event)}></input>
-                </div>
+                  </div>
+                </form>
             </div>
             <div id='buttoncontainer'>
-                <button onClick={(event) => props.clicked(event)} onMouseUp={console.log('mouse upped')}>Add Note</button>
+                <button onClick={(event) => props.clicked(event)}>Add Note</button>
             </div>
         </div>
     )
