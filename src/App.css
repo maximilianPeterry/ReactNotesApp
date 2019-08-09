@@ -1,0 +1,13 @@
+#appContainer {
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    background-color: aquamarine
+}
+
+#left {
+    width: 30vw;
+}
+#right {
+    width: 50vw;
+}

@@ -1,19 +1,18 @@
 import React from 'react';
 import './newnote.css';
 
-class NewNote extends React.Component {
-    render() {
+function NewNote(props) {
         return (
-            <div id='newContainer'>
-                <div id='newTitle'>
-                    <input id='titleinput' type='text' placeholder='Title...'></input>
-                </div>
-                <div id='newNoteField'>
-                    <input id='noteinput' type='text' placeholder='Type your note...'></input>
-                </div>
+            <div id='noteJoin'>
+                {props.notesObj.map(notePair => {
+                return (
+                <div>
+                    <h1>{ notePair.title }</h1>
+                    <h5>{ notePair.text }</h5>
+                </div>)
+            })}
             </div>
         )
     }
-}
 
 export default NewNote;
