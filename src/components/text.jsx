@@ -1,3 +1,4 @@
+//redundantCode. Keeping for possible use case
 import React from 'react';
 
 function Text(props) {

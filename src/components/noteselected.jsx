@@ -1,3 +1,4 @@
+//notWorkedOnYet. Future essential component
 import React, { Component } from 'react';
 import './sidebar.css';
 
