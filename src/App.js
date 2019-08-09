@@ -76,3 +76,8 @@ export default App;
 //=> two separate functional components
 //=> join togehter in new component
 //=> bring back to app
+
+//next steps
+//open note from sidebar onClick in new element to view whole post
+//=>delete note
+//=>option to edit note
