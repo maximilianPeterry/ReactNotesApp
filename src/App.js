@@ -42,8 +42,9 @@ class App extends Component {
   }
 
 
-  handleDelete = (event) => {
-    this.state.notesObj.slice()
+  handleDelete = (index) => {
+    // this.state.notesObj.slice()
+    console.log(index)
 
   }
 

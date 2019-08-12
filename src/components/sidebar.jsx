@@ -5,7 +5,7 @@ function Sidebar(props) {
     return (
         <div id='sidebar'>
             <div id='existingNotes'>
-                <NewNote delete={props.handleDelete} notesObj={props.notesObj} />
+                <NewNote delete={props.delete} notesObj={props.notesObj} />
             </div>
         </div>
     )
