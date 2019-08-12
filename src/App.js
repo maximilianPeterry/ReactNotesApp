@@ -11,7 +11,8 @@ class App extends Component {
     // notesArray: [],
     // titlesArray: [],
     // textsArray: [],
-    notesObj: []
+    notesObj: [],
+    idNumber: 0
   }
 
   setTitle = (event) => {
@@ -25,9 +26,10 @@ class App extends Component {
     // let note = `${this.state.title} - ${this.state.text}`
     let noteTitle = `${this.state.title}`
     let noteText = `${this.state.text}`
-    let notePair = {title: noteTitle, text: noteText}
+    let notePair = {title: noteTitle, text: noteText, id: this.state.idNumber+1}
     // this.state.notesArray.push(note);
     this.state.notesObj.push(notePair)
+    this.setState({ idNumber: (this.state.idNumber +1) })
     // this.state.titlesArray.push(noteTitle);
     // this.state.textsArray.push(noteText);
     // console.log(this.state.notesArray);
@@ -35,14 +37,16 @@ class App extends Component {
     // console.log(this.state.textsArray);
     console.log(this.state.notesObj)
     this.clearForm()
+    console.log(this.state.idNumber)
     // this.setState({ notesArray: event.target.value})
   }
 
-  // handleMaps = () => {
-  //   this.state.titlesArray.map(noteTitle => 
-  //     return (<h1>{ noteTitle }</h1>)
-  // })}
-  // }
+
+  handleDelete = (event) => {
+    this.state.notesObj.slice()
+
+  }
+
 
   viewingNote = (event) => {
 
@@ -58,7 +62,7 @@ class App extends Component {
     return (
       <div id='appContainer'>
         <div id='left'>
-          <Sidebar notesObj={this.state.notesObj} />
+          <Sidebar delete={this.handleDelete} notesObj={this.state.notesObj} />
         </div>
         <div id='right'>
           <AddNote clicked={this.handleNoteAdd} setTitle={this.setTitle} setText={this.setText} clearForm={this.clearForm}/>
@@ -79,5 +83,12 @@ export default App;
 
 //next steps
 //open note from sidebar onClick in new element to view whole post
+
+//currently testing out note delete
+//=> try poss if else random generated id for notesObj matching button id
+
 //=>delete note
+//=> made id for object
+//=> now make deleteButton id same as local obj
+//=> if deleteButton id === object id => remove object
 //=>option to edit note
